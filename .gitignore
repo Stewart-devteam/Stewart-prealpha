@@ -1,0 +1,9 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Visual Studio Code specific ignores
+.vscode/
+
+# Rider and JetBrains specific ignores
+.idea/
