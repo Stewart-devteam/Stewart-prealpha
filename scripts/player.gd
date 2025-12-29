@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-@export var speed = 10000
-@export var speed_boost = 2.5
-@onready var animation = $AnimatedSprite2D
+@export var speed: float = 10000
+@export var speed_boost: float = 2.5
+@onready var animation: AnimatedSprite2D = $AnimatedSprite2D
 
 func _process(_delta: float) -> void:
     _velocity(_delta)
@@ -14,7 +14,7 @@ func _process(_delta: float) -> void:
 # Procesa la velocidad de movimiento
 func _velocity(delta: float):
     # Obtiene la dirección del movimiento
-    var direction = Input.get_vector("left", "right", "up", "down")
+    var direction: Vector2 = Input.get_vector("left", "right", "up", "down")
 
     # Aplica la velocidad en la dirección elegida
     velocity = direction * speed * delta
