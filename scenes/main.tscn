@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0aoex3c7sypp"]
+
+[ext_resource type="Texture2D" uid="uid://dwdjknn00yv27" path="res://assets/grass.png" id="1_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://c5xdn1sgetkik" path="res://scenes/player.tscn" id="2_sugp2"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Floor" type="CanvasGroup" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor"]
+position = Vector2(-592, -296)
+texture = ExtResource("1_0wfyh")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Floor"]
+position = Vector2(8, 304)
+texture = ExtResource("1_0wfyh")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Floor"]
+position = Vector2(-592, 304.00012)
+texture = ExtResource("1_0wfyh")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Floor"]
+position = Vector2(608, -296)
+texture = ExtResource("1_0wfyh")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Floor"]
+position = Vector2(608, 304.00012)
+texture = ExtResource("1_0wfyh")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Floor"]
+position = Vector2(8, -296)
+texture = ExtResource("1_0wfyh")
+
+[node name="Zarah" parent="." instance=ExtResource("2_sugp2")]

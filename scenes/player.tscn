@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://c5xdn1sgetkik"]
+
+[ext_resource type="Texture2D" uid="uid://cyolpg8uxyslm" path="res://assets/zarah_spritesheet.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://ci5v1xvdvt2p3" path="res://scripts/player.gd" id="1_g2els"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(2950, 0, 480, 750)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ur7pv"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(3430, 0, 480, 750)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y4r1p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smehm")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smehm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ur7pv")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2wvv"]
+size = Vector2(46, 95)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_g2els")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -100)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, -46)
+scale = Vector2(0.20227273, 0.20227274)
+sprite_frames = SubResource("SpriteFrames_y4r1p")
+animation = &"walk"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5, -49.5)
+shape = SubResource("RectangleShape2D_d2wvv")
