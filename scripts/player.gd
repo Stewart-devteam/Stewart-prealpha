@@ -3,6 +3,7 @@ extends CharacterBody2D
 @export var speed: float = 10000
 @export var speed_boost: float = 2.5
 @onready var animation: AnimatedSprite2D = $AnimatedSprite2D
+@onready var music: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 func _process(_delta: float) -> void:
     _velocity(_delta)
@@ -19,9 +20,12 @@ func _velocity(delta: float):
     # Aplica la velocidad en la dirección elegida
     velocity = direction * speed * delta
 
-    # Va más rápido con el sprint
+    # Va más rápido (personaje y música) con el sprint
     if Input.is_action_pressed("sprint"):
         velocity *= speed_boost
+        music.pitch_scale = speed_boost
+    else:
+        music.pitch_scale = 1
 
 # Procesa animaciones
 func _animation():

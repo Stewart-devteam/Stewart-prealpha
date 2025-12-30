@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://c5xdn1sgetkik"]
+[gd_scene load_steps=8 format=3 uid="uid://c5xdn1sgetkik"]
 
 [ext_resource type="Texture2D" uid="uid://cyolpg8uxyslm" path="res://assets/zarah_spritesheet.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://ci5v1xvdvt2p3" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="AudioStream" uid="uid://ca2ra3atoao6e" path="res://assets/jocoso.mp3" id="3_qhqgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
 atlas = ExtResource("1_3vyb7")
@@ -52,3 +53,8 @@ autoplay = "idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(5, -49.5)
 shape = SubResource("RectangleShape2D_d2wvv")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_qhqgy")
+autoplay = true
+parameters/looping = true
