@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vbcp2sly70i0"
-path="res://.godot/imported/Size_04-export-export.png-965f60c959d8c3aec4c4cf27288929e3.ctex"
+uid="uid://ccrcag4mxow4s"
+path="res://.godot/imported/trees.png-0a50fc9f774a25c971408408ac56b206.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/Pixel Crawler - Free Pack/Environment/Props/Static/Trees/Model_03/Size_04-export-export.png"
-dest_files=["res://.godot/imported/Size_04-export-export.png-965f60c959d8c3aec4c4cf27288929e3.ctex"]
+source_file="res://assets/world/tilesheets/trees.png"
+dest_files=["res://.godot/imported/trees.png-0a50fc9f774a25c971408408ac56b206.ctex"]
 
 [params]
 

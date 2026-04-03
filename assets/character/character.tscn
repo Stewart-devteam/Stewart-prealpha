@@ -11,7 +11,10 @@
 size = Vector2(2, 4)
 
 [node name="Character" type="CharacterBody2D" unique_id=1875466189]
+scale = Vector2(10, 10)
 script = ExtResource("1_rfqar")
+walk_speed = 120.0
+run_speed = 240.0
 
 [node name="CollisionShape" type="CollisionShape2D" parent="." unique_id=1941940298]
 shape = SubResource("RectangleShape2D_dbrvq")
@@ -23,7 +26,7 @@ animation = &"idle_down"
 autoplay = "idle_down"
 
 [node name="Camera" type="Camera2D" parent="." unique_id=896944815]
-zoom = Vector2(25, 25)
+zoom = Vector2(2.5, 2.5)
 position_smoothing_enabled = true
 
 [node name="StateMachine" type="Node" parent="." unique_id=1437317356 node_paths=PackedStringArray("controlled_node", "default_state")]
