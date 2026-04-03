@@ -1,3 +1,96 @@
 [gd_scene format=3 uid="uid://cacld0petm7tj"]
 
+[ext_resource type="PackedScene" uid="uid://5s50x0jm5ws5" path="res://assets/character/character.tscn" id="1_c5pkw"]
+[ext_resource type="Texture2D" uid="uid://nu80lw8tpo1g" path="res://placeholder.svg" id="2_l57e8"]
+
 [node name="World" type="Node2D" unique_id=1595362693]
+
+[node name="Placeholders" type="Node2D" parent="." unique_id=556214687]
+scale = Vector2(0.04, 0.04)
+
+[node name="Placeholder" type="Sprite2D" parent="Placeholders" unique_id=2017605907]
+position = Vector2(-409, -415)
+scale = Vector2(0.689, 0.689)
+texture = ExtResource("2_l57e8")
+
+[node name="Placeholder2" type="Sprite2D" parent="Placeholders" unique_id=204826046]
+position = Vector2(-490, 586)
+scale = Vector2(0.689, 0.689)
+texture = ExtResource("2_l57e8")
+
+[node name="Placeholder3" type="Sprite2D" parent="Placeholders" unique_id=1946026010]
+position = Vector2(385, 502)
+scale = Vector2(0.689, 0.689)
+texture = ExtResource("2_l57e8")
+
+[node name="Placeholder4" type="Sprite2D" parent="Placeholders" unique_id=2049644039]
+position = Vector2(-760, 53)
+scale = Vector2(0.689, 0.689)
+texture = ExtResource("2_l57e8")
+
+[node name="Placeholder5" type="Sprite2D" parent="Placeholders" unique_id=495884973]
+position = Vector2(429, -355)
+scale = Vector2(0.689, 0.689)
+texture = ExtResource("2_l57e8")
+
+[node name="Placeholder6" type="Sprite2D" parent="Placeholders" unique_id=922283855]
+position = Vector2(1148, 128)
+scale = Vector2(0.689, 0.689)
+texture = ExtResource("2_l57e8")
+
+[node name="Placeholder7" type="Sprite2D" parent="Placeholders" unique_id=1360425079]
+position = Vector2(1239, 721)
+scale = Vector2(0.689, 0.689)
+texture = ExtResource("2_l57e8")
+
+[node name="Placeholder8" type="Sprite2D" parent="Placeholders" unique_id=744981908]
+position = Vector2(-1279, -637)
+scale = Vector2(0.689, 0.689)
+texture = ExtResource("2_l57e8")
+
+[node name="Placeholder9" type="Sprite2D" parent="Placeholders" unique_id=1660718862]
+position = Vector2(-1052, 469)
+scale = Vector2(0.689, 0.689)
+texture = ExtResource("2_l57e8")
+
+[node name="Placeholder10" type="Sprite2D" parent="Placeholders" unique_id=1393585564]
+position = Vector2(-274, -961)
+scale = Vector2(0.689, 0.689)
+texture = ExtResource("2_l57e8")
+
+[node name="Placeholder11" type="Sprite2D" parent="Placeholders" unique_id=219830939]
+position = Vector2(439, -971)
+scale = Vector2(0.689, 0.689)
+texture = ExtResource("2_l57e8")
+
+[node name="Placeholder12" type="Sprite2D" parent="Placeholders" unique_id=1840804573]
+position = Vector2(1283, -602)
+scale = Vector2(0.689, 0.689)
+texture = ExtResource("2_l57e8")
+
+[node name="Placeholder13" type="Sprite2D" parent="Placeholders" unique_id=296864740]
+position = Vector2(-1461, -76)
+scale = Vector2(0.689, 0.689)
+texture = ExtResource("2_l57e8")
+
+[node name="Placeholder14" type="Sprite2D" parent="Placeholders" unique_id=446394300]
+position = Vector2(-996, 980)
+scale = Vector2(0.689, 0.689)
+texture = ExtResource("2_l57e8")
+
+[node name="Placeholder15" type="Sprite2D" parent="Placeholders" unique_id=1449686195]
+position = Vector2(-21, 1030)
+scale = Vector2(0.689, 0.689)
+texture = ExtResource("2_l57e8")
+
+[node name="Placeholder16" type="Sprite2D" parent="Placeholders" unique_id=1918761947]
+position = Vector2(1875, 257)
+scale = Vector2(0.689, 0.689)
+texture = ExtResource("2_l57e8")
+
+[node name="Placeholder17" type="Sprite2D" parent="Placeholders" unique_id=1099370293]
+position = Vector2(-120, 105)
+scale = Vector2(0.689, 0.689)
+texture = ExtResource("2_l57e8")
+
+[node name="Character" parent="." unique_id=1875466189 instance=ExtResource("1_c5pkw")]

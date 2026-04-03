@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://5s50x0jm5ws5"]
+
+[ext_resource type="Script" uid="uid://bjbcewjokue1n" path="res://assets/character/character.gd" id="1_rfqar"]
+[ext_resource type="SpriteFrames" uid="uid://dx5lycjhypxey" path="res://assets/character/animations/character_animations.tres" id="2_lxacm"]
+[ext_resource type="Script" uid="uid://bm5vyafqw8tmc" path="res://assets/character/character_camera.gd" id="3_lxacm"]
+[ext_resource type="Script" uid="uid://bxs53es51hc4u" path="res://addons/state_machine/state_machine.gd" id="4_lxacm"]
+[ext_resource type="Script" uid="uid://j48ad3mrchj7" path="res://assets/character/state_machine/idle.gd" id="4_wvpp3"]
+[ext_resource type="Script" uid="uid://d2kg3pcxwtkrx" path="res://assets/character/state_machine/walk.gd" id="5_lxacm"]
+[ext_resource type="Script" uid="uid://bmso132ekg6xv" path="res://assets/character/state_machine/run.gd" id="6_eapd6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dbrvq"]
+size = Vector2(2, 4)
+
+[node name="Character" type="CharacterBody2D" unique_id=1875466189]
+script = ExtResource("1_rfqar")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="." unique_id=1941940298]
+shape = SubResource("RectangleShape2D_dbrvq")
+
+[node name="PlaceholderSprite" type="AnimatedSprite2D" parent="." unique_id=657364004]
+scale = Vector2(0.13636364, 0.13636373)
+sprite_frames = ExtResource("2_lxacm")
+animation = &"idle_down"
+
+[node name="Camera" type="Camera2D" parent="." unique_id=896944815]
+zoom = Vector2(25, 25)
+script = ExtResource("3_lxacm")
+
+[node name="CharacterStateMachine" type="Node" parent="." unique_id=1437317356 node_paths=PackedStringArray("controlled_node", "default_state")]
+script = ExtResource("4_lxacm")
+controlled_node = NodePath("..")
+default_state = NodePath("Idle")
+metadata/_custom_type_script = "uid://bxs53es51hc4u"
+
+[node name="Idle" type="Node" parent="CharacterStateMachine" unique_id=2123208691]
+script = ExtResource("4_wvpp3")
+
+[node name="Walk" type="Node" parent="CharacterStateMachine" unique_id=1547635309]
+script = ExtResource("5_lxacm")
+
+[node name="Run" type="Node" parent="CharacterStateMachine" unique_id=313582186]
+script = ExtResource("6_eapd6")
