@@ -4,6 +4,14 @@
 [ext_resource type="TileSet" uid="uid://dkignij2ndcng" path="res://assets/world/tilesets/floor_tiles.tres" id="1_aekxa"]
 [ext_resource type="PackedScene" uid="uid://5s50x0jm5ws5" path="res://assets/character/character.tscn" id="1_c5pkw"]
 [ext_resource type="TileSet" uid="uid://btdw255yv8usy" path="res://assets/world/tilesets/rocks_tileset.tres" id="1_t3mbi"]
+[ext_resource type="Script" uid="uid://cotbad7lj4wf1" path="res://addons/vector_display_2d/vector_display_2d.gd" id="5_r2l5x"]
+[ext_resource type="Script" uid="uid://rgbsk5n4gysx" path="res://addons/vector_display_2d/vector_display_settings.gd" id="6_hukdr"]
+
+[sub_resource type="Resource" id="Resource_sn10k"]
+script = ExtResource("6_hukdr")
+vector_scale = 0.05
+width = 0.2
+metadata/_custom_type_script = "uid://rgbsk5n4gysx"
 
 [node name="World" type="Node2D" unique_id=1595362693]
 
@@ -22,3 +30,9 @@ tile_set = ExtResource("1_88ng3")
 [node name="Character" parent="." unique_id=1875466189 instance=ExtResource("1_c5pkw")]
 position = Vector2(-3, -8)
 scale = Vector2(8, 8)
+
+[node name="VectorDisplay2D" type="Node2D" parent="Character" unique_id=1656542890 node_paths=PackedStringArray("target_node")]
+script = ExtResource("5_r2l5x")
+target_node = NodePath("..")
+settings = SubResource("Resource_sn10k")
+metadata/_custom_type_script = "uid://cotbad7lj4wf1"
