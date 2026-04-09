@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://cacld0petm7tj"]
 
-[ext_resource type="TileSet" uid="uid://np1tci1ua81o" path="res://assets/world/tilesets/vegetation_tileset.tres" id="1_88ng3"]
-[ext_resource type="TileSet" uid="uid://dkignij2ndcng" path="res://assets/world/tilesets/floor_tiles.tres" id="1_aekxa"]
+[ext_resource type="TileSet" uid="uid://np1tci1ua81o" path="res://assets/world/tilemaps/tilesets/vegetation_tileset.tres" id="1_88ng3"]
+[ext_resource type="TileSet" uid="uid://dkignij2ndcng" path="res://assets/world/tilemaps/tilesets/floor_tiles.tres" id="1_aekxa"]
 [ext_resource type="PackedScene" uid="uid://5s50x0jm5ws5" path="res://assets/character/character.tscn" id="1_c5pkw"]
-[ext_resource type="TileSet" uid="uid://btdw255yv8usy" path="res://assets/world/tilesets/rocks_tileset.tres" id="1_t3mbi"]
+[ext_resource type="TileSet" uid="uid://btdw255yv8usy" path="res://assets/world/tilemaps/tilesets/rocks_tileset.tres" id="1_t3mbi"]
 [ext_resource type="Script" uid="uid://cotbad7lj4wf1" path="res://addons/vector_display_2d/vector_display_2d.gd" id="5_r2l5x"]
 [ext_resource type="Script" uid="uid://rgbsk5n4gysx" path="res://addons/vector_display_2d/vector_display_settings.gd" id="6_hukdr"]
 
