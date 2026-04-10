@@ -1,6 +1,7 @@
 # Abril de 2026
 
 ## Semana del 6 al 12 de abril
+- [10 Abril 2026] Sistema básico de movimiento en fila para múltiples personajes
 - [07 Abril 2026] Corrección en las animaciones
 
 ## Semana del 30 de marzo al 05 de abril

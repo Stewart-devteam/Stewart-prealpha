@@ -49,6 +49,7 @@ rotates = false
 [node name="VectorDisplay2D" type="Node2D" parent="CharactersPath/PathFollow/Character" unique_id=1601182518 node_paths=PackedStringArray("target_node")]
 script = ExtResource("5_r2l5x")
 target_node = NodePath("..")
+target_property = "last_velocity"
 settings = SubResource("Resource_hukdr")
 metadata/_custom_type_script = "uid://cotbad7lj4wf1"
 

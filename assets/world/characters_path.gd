@@ -4,11 +4,11 @@ class_name CharactersPath extends Path2D
 
 
 ## Longitud máxima de la curva
-const PATH_MAX_LENGHT := 500.0
+const PATH_MAX_LENGTH := 100.0
 ## Mínima distancia a la que hay que moverse para actualizar el path
 const MIN_PATH_TRACE := 1.0
 ## Distancia entre personajes
-const CHARA_DISTANCE := 25.0
+const CHARA_DISTANCE := 30.0
 
 
 func _ready() -> void:
@@ -52,7 +52,7 @@ func _on_update_path(new_pos: Vector2) -> void:
 	curve.add_point(to_local(new_pos))
 
 	# Elimina el ultimo punto si la curva supera el largo máximo
-	if curve.get_baked_length() > PATH_MAX_LENGHT: curve.remove_point(0)
+	if curve.get_baked_length() > PATH_MAX_LENGTH: curve.remove_point(0)
 
 
 ## Ubica a los personajes en una distancia equivalente a lo largo de la curva
