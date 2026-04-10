@@ -1,6 +1,10 @@
 class_name Character extends CharacterBody2D
 
 
+## Señal que indica que el jugador se ha movido lo suficiente como para actualizar la trayectoria de
+## los personajes
+signal update_path(new_pos: Vector2)
+
 ## Nombres de las direcciones de las animaciones
 const Directions := {
 	UP = &"up",
@@ -19,16 +23,23 @@ const Directions := {
 
 ## Sprite con las animaciones
 @onready var sprite: AnimatedSprite2D = $PlaceholderSprite
+## Última posición (global) en la que se actualizó el path de los personajes
+@onready var last_path_pos: Vector2 = global_position:
+	set(value):
+		last_path_pos = value
+		update_path.emit(value)
 
 
-## Dirección de la entrada del teclado. Usado a lo largo de la máquina de estados
+## Bandera que determina si el jugador se mueve o sigue a otro
+var is_following: bool = false
+## Dirección de la entrada. Usado a lo largo de la máquina de estados
 var input_direction: Vector2:
 	set(value):
 		if value == input_direction: return
 		input_direction = value
 		_update_direction_name()
 ## Nombre de la última dirección, para su uso en las animaciones del personaje
-var last_direction_name := Directions.DOWN:
+var last_direction_name: StringName = Directions.DOWN:
 	set(value):
 		if value == last_direction_name: return
 		last_direction_name = value
@@ -38,7 +49,15 @@ var last_direction_name := Directions.DOWN:
 func _physics_process(_delta: float) -> void:
 	# Actualiza la dirección de la entrada de teclado
 	input_direction = Input.get_vector(&"left", &"right", &"up", &"down")
-	move_and_slide()
+
+	# Actualiza el path si nos hemos movido lo suficiente
+	var distance := (global_position - last_path_pos).length()
+	if distance >= CharactersPath.MIN_PATH_TRACE: last_path_pos = global_position
+
+	if not is_following: move_and_slide()
+
+
+#region Animaciones
 
 
 ## Ejecuta la animación que se le pide, según el nombre y la dirección. [br]
@@ -72,3 +91,6 @@ func _update_direction_name() -> void:
 		last_direction_name = Directions.DOWN if input_direction.y > 0 else Directions.UP
 
 	play_anim()
+
+
+#endregion

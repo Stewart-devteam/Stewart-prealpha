@@ -8,22 +8,23 @@
 [ext_resource type="Script" uid="uid://bmso132ekg6xv" path="res://assets/character/state_machine/run.gd" id="6_eapd6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dbrvq"]
-size = Vector2(2, 4)
+size = Vector2(1.5, 0.5625)
 
 [node name="Character" type="CharacterBody2D" unique_id=1875466189]
-scale = Vector2(10, 10)
+scale = Vector2(8, 8)
 script = ExtResource("1_rfqar")
 walk_speed = 120.0
 run_speed = 240.0
-
-[node name="CollisionShape" type="CollisionShape2D" parent="." unique_id=1941940298]
-shape = SubResource("RectangleShape2D_dbrvq")
 
 [node name="PlaceholderSprite" type="AnimatedSprite2D" parent="." unique_id=657364004]
 scale = Vector2(0.13636364, 0.13636373)
 sprite_frames = ExtResource("2_lxacm")
 animation = &"idle_down"
 autoplay = "idle_down"
+
+[node name="CollisionShape" type="CollisionShape2D" parent="." unique_id=1941940298]
+position = Vector2(0, 1.90625)
+shape = SubResource("RectangleShape2D_dbrvq")
 
 [node name="Camera" type="Camera2D" parent="." unique_id=896944815]
 zoom = Vector2(2.5, 2.5)
