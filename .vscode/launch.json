@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "name": "GDScript: Launch Project",
+            "type": "godot",
+            "request": "launch",
+            "project": "",
+            "debug_collisions": true,
+            "debug_paths": true,
+            "debug_navigation": true,
+            "additional_options": ""
+        }
+    ]
+}

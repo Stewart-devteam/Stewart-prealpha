@@ -2,8 +2,8 @@
 .godot/
 /android/
 
-# Visual Studio Code specific ignores
-.vscode/
-
-# Rider and JetBrains specific ignores
-.idea/
+# System specific ignores
+.tmp
+.DS_Store
+Thumbs.db
+desktop.ini
