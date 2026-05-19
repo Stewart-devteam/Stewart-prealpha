@@ -21,7 +21,7 @@ El jugador acompaña a **Stewart**, un alce autoproclamado caballero, junto a su
 ---
 
 ## Requerimientos y dependencias
-- Godot 4.6.1 estable (opcionalmente la versión .NET)
+- Godot 4.6.2 estable (opcionalmente la versión .NET)
 - Git y GitHub
 - Pixieditor y algún programa de dibujo
 - Visual Studio Code u otro editor de tu gusto
@@ -64,3 +64,4 @@ Stewart es creado por _Stewart DevTeam_, un equipo de desarrollo de GDD (antes *
 > 5. Lucas Romero
 > 6. Daniel Durán (Wolfy) 
 > 7. Steven (?)
+> 8. Ana Valderrama
