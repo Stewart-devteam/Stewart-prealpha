@@ -1,5 +1,9 @@
 # Mayo de 2026
 
+## Semana del 18 al 24 de mayo
+- [24 mayo 2026] Corrección del problema con el y-sort
+- [24 mayo 2026] Implementación de colisiones en los tilemaps
+
 ## Semana del 4 al 10 de mayo
 - [09 mayo 2026] Mejoras en el README
 - [09 mayo 2026] Menú de pausa básico implementado

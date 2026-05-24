@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://j48ad3mrchj7" path="res://assets/character/states/idle.gd" id="4_wvpp3"]
 [ext_resource type="Script" uid="uid://d2kg3pcxwtkrx" path="res://assets/character/states/walk.gd" id="5_lxacm"]
 [ext_resource type="Script" uid="uid://bmso132ekg6xv" path="res://assets/character/states/run.gd" id="6_eapd6"]
-[ext_resource type="Script" uid="uid://ccjgd872mxyo7" path="res://assets/character/states/pause.gd" id="7_lxacm"]
+[ext_resource type="Script" path="res://assets/character/states/pause.gd" id="7_lxacm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dbrvq"]
 size = Vector2(1.5, 0.5625)
@@ -18,16 +18,19 @@ walk_speed = 120.0
 run_speed = 240.0
 
 [node name="PlaceholderSprite" type="AnimatedSprite2D" parent="." unique_id=657364004]
+position = Vector2(-4.7683716e-07, 0)
 scale = Vector2(0.13636364, 0.13636373)
 sprite_frames = ExtResource("2_lxacm")
 animation = &"idle_down"
 autoplay = "idle_down"
+offset = Vector2(3.8146973e-06, -16.499989)
 
 [node name="CollisionShape" type="CollisionShape2D" parent="." unique_id=1941940298]
-position = Vector2(0, 1.90625)
+position = Vector2(0, -0.34375)
 shape = SubResource("RectangleShape2D_dbrvq")
 
 [node name="Camera" type="Camera2D" parent="." unique_id=896944815]
+position = Vector2(0, -2.25)
 zoom = Vector2(2.5, 2.5)
 position_smoothing_enabled = true
 
