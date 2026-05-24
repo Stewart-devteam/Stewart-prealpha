@@ -39,9 +39,6 @@ func _find_and_set_characters() -> void:
 	# Por cada personaje que no sea lider instancia un PathFollow, un RemoteTransform y empieza a asignar
 	var follower_found := false
 	for character: Character in characters:
-		# Forzamos a que el personaje ignore escalas/posiciones de sus padres
-		# Para evitar problemas de movimiento
-		character.top_level = true
 		character.is_following = true
 
 		# Designa al lider
@@ -54,6 +51,7 @@ func _find_and_set_characters() -> void:
 			continue
 
 		# Desactiva la colisión para evitar problemas de movimiento
+		# ! Tener cuidado si esto se rompe con otras formas de colisión
 		character.collision_layer = 0
 		character.collision_mask = 0
 
@@ -85,10 +83,9 @@ func _on_update_path(new_pos: Vector2) -> void:
 	# Convertimos la posición global a local para la curva
 	curve.add_point(to_local(new_pos))
 
-	# Elimina el ultimo punto si la curva supera el largo máximo
+	# Se elimina el primer punto porque es el de más atrás
 	if curve.get_baked_length() > PATH_MAX_LENGTH: curve.remove_point(0)
 
-	# Reubica los personajes
 	_set_characters_pos()
 
 
@@ -108,8 +105,8 @@ func _set_characters_pos() -> void:
 		if not character.is_following: continue
 
 		# Separamos a los personajes según CHARA_DISTANCE
-		# ? La distancia se cuenta en reversa porque el lider dibuja el final de la curva
-		# ? Usamos max(0) para que si el path es corto, esperen en el origen
+		# ? La distancia se cuenta en reversa porque el final de la curva es el frente
+		# ? Usamos max(0) para que si el path sea corto, esperen en el origen
 		var target_distance := baked_length - (i + 1) * CHARA_DISTANCE
 		character_follow.progress = max(0.0, target_distance)
 

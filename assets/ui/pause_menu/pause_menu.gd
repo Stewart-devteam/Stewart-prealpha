@@ -1,7 +1,7 @@
 class_name PauseMenu extends ColorRect
 
 
-## Se dispara cuando el menú se activa o desactiva
+## Se emite cuando el menú se activa o desactiva
 signal set_visible(value: bool)
 
 
