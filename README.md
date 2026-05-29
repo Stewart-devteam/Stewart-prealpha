@@ -4,7 +4,6 @@
 
 ![Godot 4](https://img.shields.io/badge/Godot-4.6-0ea5e9?style=flat-square&logo=godotengine&logoColor=0ea5e9)
 [![Linktree](https://img.shields.io/badge/Linktree-gray?style=flat-square&logo=linktree&logoColor=%2345E55F)](https://linktr.ee/stewart_devteam)
-[![Mintlify docs](https://img.shields.io/badge/Mintlify-docs-18E299?style=flat-square&logo=mintlify)](https://mintlify.wiki/Stewart-DevTeam-Team/stewart_prealpha)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](./LICENSE.md)
 [![Assets License](https://img.shields.io/badge/Assets%20License-CC%20BY--NC%204.0-lightgrey?style=flat-square)](./ASSETS_LICENSE.md)
 
